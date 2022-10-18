@@ -17,7 +17,7 @@ app.use(cookieParser()); // parsing cookies
 
 
 app.use(cors({
-    origin: ['http://localhost:3000','https://e-commerce-23cfd.web.app', "*"],
+    origin: ['http://localhost:3000','https://e-commerce-23cfd.web.app/', "*"],
     credentials: true
 }));
 
