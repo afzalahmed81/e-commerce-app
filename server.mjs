@@ -18,7 +18,8 @@ app.use(cookieParser()); // parsing cookies
 
 app.use(cors({
     origin: ['http://localhost:3000','https://e-commerce-23cfd.web.app','https://634f9f6477f3d656dc01245a--calm-rabanadas-091d83.netlify.app',"*"],
-    credentials: true
+    credentials: true,
+    httpOnly:true
 }));
 
 
