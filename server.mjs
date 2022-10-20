@@ -19,7 +19,7 @@ app.use(cookieParser()); // parsing cookies
 app.use(cors({
     origin: ['http://localhost:3000','https://e-commerce-23cfd.web.app','https://634f9f6477f3d656dc01245a--calm-rabanadas-091d83.netlify.app',"*"],
     credentials: true,
-    httpOnly:true
+    
 }));
 
 
@@ -92,7 +92,9 @@ app.post("/login", (req, res) => {
 
                             res.cookie('Token', token, {
                                 maxAge: 86_400_000,
-                                httpOnly: true // https only cookies are the most secure one
+                                httpOnly: true, // https only cookies are the most secure one
+                                sameSite:"none", // request from other networks will also be entertained
+                                secure:"true"    // secure 
                             });
 
                             res.send({
